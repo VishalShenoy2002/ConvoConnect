@@ -1,0 +1,66 @@
+:root {
+    --color-01: #320064;
+    --color-02: #230045;
+    --color-03: #282828;
+    --color-04: #141414;
+    --color-05: #000000;
+
+    --light-base-color: #ffffff;
+
+    --accent-color-01: #ff0000;
+}
+
+#video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+video {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid var(--color-01);
+}
+
+body {
+    background: var(--color-05);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.control-button {
+    cursor: pointer;
+    border-radius: 50%;
+    /* padding: 1rem; */
+    background: var(--color-04);
+    color: var(--light-base-color);
+    width: 5rem;
+    height: 5rem;
+
+    outline: none;
+    border: none;
+}
+
+.controls {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.icon {
+    font-size: 1.3rem;
+    font: 900;
+}
+
+#exitButton {
+    background: var(--accent-color-01);
+}
