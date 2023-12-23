@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Scripts -->
+  <script>
+    const ROOM_ID = "<%= roomId %>"
+  </script>
+  <script defer src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js"></script>
+  <script src="/socket.io/socket.io.js" defer></script>
+  <script src="script.js" defer></script>
+  
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" defer>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>ConvoConnect</title>
+</head>
+<body>
+  <div id="video-grid"></div>
+  <div class="controls">
+    <button class="control-button" id="microphoneButton">
+      <i class="fa-solid fa-microphone icon"></i>
+      <!-- <i class="fa-solid fa-microphone"></i> -->
+    </button>
+    <button class="control-button" id="cameraButton">
+      <i class="fa-solid fa-video icon"></i>
+      <!-- <i class="fa-solid fa-video-slash icon"></i> -->
+    </button>
+    <button class="control-button" id="exitButton">
+      <i class="fa-solid fa-arrow-right-from-bracket icon"></i>
+    </button>
+  </div>
+</body>
+</html>
