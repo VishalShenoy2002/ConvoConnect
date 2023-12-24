@@ -16,6 +16,7 @@
     gap: 3rem;
     justify-content: center;
     margin-top: 5%;
+    
 }
 
 video {
@@ -32,10 +33,19 @@ body {
     background-attachment: fixed;
 
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+.video-container{
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 3rem;
+    z-index: 1;
+    /* background-color: var(--accent-color-01); */
 }
 
 .control-button {
