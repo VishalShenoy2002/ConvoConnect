@@ -13,8 +13,12 @@ const peers = {}
 
 const microphoneButton = document.getElementById('microphoneButton');
 const cameraButton = document.getElementById('cameraButton');
+const chatButton = document.getElementById('chatButton');
 const exitButton = document.getElementById('exitButton');
 
+var chatOpened = false
+
+// chatButton.addEventListener('click', toggleChat)
 exitButton.addEventListener('click',function (){
   exitChat()
 })
@@ -109,6 +113,20 @@ function toggleCamera(stream){
 
     }
 }
+
+// function toggleChat(){
+//   const chatContainer = document.getElementById('chat-container')
+//   if(chatOpened == false){
+//     chatContainer.style.display = 'flex'
+//     chatButton.style.background = 'var(--color-01)'
+//     chatOpened = true
+//   }
+//   else{
+//     chatContainer.style.display = 'none'
+//     chatButton.style.background = 'var(--color-04)'
+//     chatOpened = false
+//   }
+// }
 
 function exitChat(){
   currentWindow.location = '/'
