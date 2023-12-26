@@ -1,0 +1,27 @@
+@import url('imports.css');
+:root {
+    --color-01: #320064;
+    --color-02: #230045;
+    --color-03: #282828;
+    --color-04: #141414;
+    --color-05: #000000;
+
+    --light-base-color: #ffffff;
+
+    --accent-color-01: #ff0000;
+
+    --font-family-01: 'Poppins', sans-serif;
+    --font-family-02: 'Rubik Doodle Shadow', serif;
+}
+
+
+body {
+    background: var(--color-05);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    gap: 0.5em;
+    color: var(--light-base-color);
+}
