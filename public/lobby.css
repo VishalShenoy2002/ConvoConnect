@@ -20,8 +20,70 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 
-    display: grid;
-    grid-template-columns: repeat(2,2fr);
+    display: flex;
+    flex-direction: column;
     gap: 0.5em;
     color: var(--light-base-color);
+    align-items: center;
+    justify-content: center;
 }
+
+
+.heading-1{
+    font-size: 3rem;
+    font-family: var(--font-family-02);
+    word-spacing: 1rem;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    gap: 3rem;
+
+    width: 75%;
+    height: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: #282828;
+    border-radius: 10px;
+
+    transition: 1s ease-in-out;
+    transform: translateY(100px);
+    text-align: center;
+}
+.container:hover, .container:focus{
+    transform: translateY(50px);
+}
+.container label, .container p{
+    font-family: var(--font-family-01);
+}
+
+
+.rounded-rectangle-button{
+    cursor: pointer;
+    padding-block: 0.7rem;
+
+    outline: none;
+    border: none;
+    border-radius: 1em;
+
+    background-color: var(--color-01);
+    color: var(--light-base-color);
+
+    font-family: var(--font-family-01);
+    
+}
+
+.rounded-rectangle-button:hover, .rounded-rectangle-button:focus{
+    background-color: var(--color-02);
+}
+
+.rounded-rectangle-button:active{
+    background-color: var(--color-01);
+}
+
