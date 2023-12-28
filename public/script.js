@@ -1,4 +1,5 @@
 const socket = io('/')
+const screenShareContainer = document.getElementById('screen-container')
 const videoGrid = document.getElementById('video-grid')
 const myPeer = new Peer(undefined, {
   host: '/',
@@ -22,6 +23,7 @@ var chatOpened = false
 exitButton.addEventListener('click',function (){
   exitChat()
 })
+
 navigator.mediaDevices.getUserMedia({
   video: true,
   audio: true
@@ -61,6 +63,7 @@ function connectToNewUser(userId, stream) {
   const video = document.createElement('video')
   call.on('stream', userVideoStream => {
     addVideoStream(video, userVideoStream)
+    shareScreen()
   })
   call.on('close', () => {
     video.remove()
@@ -129,5 +132,6 @@ function toggleCamera(stream){
 // }
 
 function exitChat(){
-  currentWindow.location = '/'
+  currentWindow.location = '/lobby'
 }
+
