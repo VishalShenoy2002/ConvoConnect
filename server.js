@@ -16,8 +16,18 @@ app.get('/', (req, res) => {
 })
 
 app.get('/:room', (req, res) => {
-  res.render('room', { roomId: req.params.room })
+  const roomParam = req.params.room
+
+  if(roomParam == 'lobby'){
+    res.render('lobby')
+  }
+  else{
+
+    res.render('room', { roomId: roomParam })
+  }
 })
+
+
 
 io.on('connection', socket => {
   socket.on('join-room', (roomId, userId) => {
