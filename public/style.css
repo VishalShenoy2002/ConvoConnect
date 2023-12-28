@@ -1,3 +1,5 @@
+@import url('imports.css');
+
 :root {
     --color-01: #320064;
     --color-02: #230045;
@@ -8,6 +10,9 @@
     --light-base-color: #ffffff;
 
     --accent-color-01: #ff0000;
+
+    --font-family-01: 'Poppins', sans-serif;
+    --font-family-02: 'Rubik Doodle Shadow', serif;
 }
 
 #video-grid {
@@ -37,6 +42,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 0.5em;
+    color: var(--light-base-color);
 }
 .video-container{
     display: flex;
@@ -74,3 +80,4 @@ body {
 #exitButton {
     background: var(--accent-color-01);
 }
+
